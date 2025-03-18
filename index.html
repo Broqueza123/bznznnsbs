@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Batman Chasing Joker</title>
+  <style>
+    body {
+      background-image: url(https://i.makeagif.com/media/12-09-2020/3FmrKC.gif);
+      background-repeat: no-repeat;
+      background-size: 1500px;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Joker container */
+    .joker-container {
+      position: absolute;
+      bottom: 70px;
+      animation: jokerRun 8s linear infinite;
+      z-index: 2;
+    }
+
+    .joker-container img {
+      height: 130px;
+      width: auto;
+    }
+
+    /* Batman container */
+    .batman-container {
+      position: absolute;
+      bottom: 60px;
+      animation: batmanChase 8s linear infinite;
+      z-index: 1;
+    }
+
+    .batman-container img {
+      height: 150px;
+      width: auto;
+    }
+
+    /* Helicopter container */
+    .helicopter-container {
+      position: absolute;
+      top: 80px;
+      animation: helicopterFly 20s linear infinite;
+      z-index: 3;
+    }
+
+    .helicopter-container img {
+      height: 100px;
+      width: auto;
+    }
+    
+    /* New helicopter container */
+    .helicopter-container2 {
+      position: absolute;
+      top: 150px;
+      animation: helicopterFly2 25s linear infinite;
+      z-index: 3;
+    }
+
+    .helicopter-container2 img {
+      height: 120px;
+      width: auto;
+    }
+
+    /* Robin container */
+    .robin-container {
+      position: absolute;
+      bottom: 65px;
+      animation: robinChase 8s linear infinite;
+      z-index: 1;
+      animation-delay: 2s;
+    }
+
+    .robin-container img {
+      height: 140px;
+      width: auto;
+    }
+
+    /* Joker's animation - smooth transition */
+    @keyframes jokerRun {
+      0% {
+        left: -150px;
+        opacity: 0;
+      }
+      5% {
+        opacity: 1;
+        left: 0;
+      }
+      85% {
+        opacity: 1;
+        left: calc(100vw - 150px);
+      }
+      100% {
+        left: 100vw;
+        opacity: 0;
+      }
+    }
+
+    /* Batman's animation - smooth transition */
+    @keyframes batmanChase {
+      0% {
+        left: -300px;
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+        left: -100px;
+      }
+      90% {
+        opacity: 1; 
+        left: calc(100vw - 200px);
+      }
+      100% {
+        left: 100vw;
+        opacity: 0;
+      }
+    }
+
+    /* Helicopter animation */
+    @keyframes helicopterFly {
+      0% {
+        left: -200px;
+        opacity: 0;
+      }
+      5% {
+        opacity: 1;
+        left: 0;
+      }
+      85% {
+        opacity: 1;
+        left: calc(100vw - 200px);
+      }
+      100% {
+        left: 100vw;
+        opacity: 0;
+      }
+    }
+    
+    /* Second helicopter animation */
+    @keyframes helicopterFly2 {
+      0% {
+        left: 100vw;
+        opacity: 0;
+      }
+      5% {
+        opacity: 1;
+        left: calc(100vw - 100px);
+      }
+      85% {
+        opacity: 1;
+        left: 100px;
+      }
+      100% {
+        left: -200px;
+        opacity: 0;
+      }
+    }
+    
+    /* Robin's animation */
+    @keyframes robinChase {
+      0% {
+        left: -350px;
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+        left: -150px;
+      }
+      90% {
+        opacity: 1; 
+        left: calc(100vw - 250px);
+      }
+      100% {
+        left: 100vw;
+        opacity: 0;
+      }
+    }
+    
+    /* Harley's animation */
+    @keyframes harleyRun {
+      0% {
+        left: -180px;
+        opacity: 0;
+      }
+      5% {
+        opacity: 1;
+        left: -30px;
+      }
+      85% {
+        opacity: 1;
+        left: calc(100vw - 170px);
+      }
+      100% {
+        left: 100vw;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Audio element - autoplays and loops -->
+  <audio autoplay loop>
+    <source src="sound.mp3">
+  </audio>
+
+  <!-- Batman character -->
+  <div class="batman-container">
+    <img src="https://media3.giphy.com/media/giuuIJG8msg7zzvTTE/giphy.gif?cid=6c09b952x6asxfmtrotyklonpfgjqz81ldhdsv53hs4sijbd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="Batman character" />
+  </div>
+  
+  <!-- Joker character -->
+  <div class="joker-container">
+    <img src="https://media-s3-us-east-1.ceros.com/editorial-content/images/2019/10/28/6c82069f886f29ce20ae7d52b12f1334/joker.gif" alt="Joker character" />
+  </div>
+
+  <!-- Robin character -->
+  <div class="robin-container">
+    <img src="https://media3.giphy.com/media/aCi7hlUqejenhbqNiT/giphy.gif?cid=6c09b952fpj6icv9kdc7dbhtjt689tjojog61hn73h8rjc0y&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="Robin character" />
+  </div>
+  
+  <!-- Harley Quinn character -->
+  
+
+  <!-- Helicopter -->
+  <div class="helicopter-container">
+    <img src="https://media1.giphy.com/media/Gc4cxrqNPFHYIBbdFa/giphy.gif?cid=6c09b9527pomivs3myxu52725o6w72lip8cuamh03y1p1yx8&ep=v1_stickers_search&rid=giphy.gif&ct=s" alt="Helicopter" />
+  </div>
+  
+
+
+  <script>
+    // Ensure audio plays automatically without user interaction
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = document.querySelector('audio');
+      
+      // Try to play audio when the page loads
+      const playPromise = audio.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          // Auto-play was prevented
+          // Create a button that will allow users to start the audio
+          const button = document.createElement('button');
+          button.innerHTML = 'Play Audio';
+          button.style.position = 'fixed';
+          button.style.top = '10px';
+          button.style.left = '10px';
+          button.style.zIndex = '1000';
+          button.addEventListener('click', () => {
+            audio.play();
+            button.remove();
+          });
+          document.body.appendChild(button);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
